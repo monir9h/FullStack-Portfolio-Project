@@ -13,7 +13,7 @@ const getAllFlowers = async () => {
 // ONE FLOWER
 const getFlower = async (id) => {
   try {
-    const oneFlower = await db.one("SELECT * FROM flowerss WHERE id=$1", id);
+    const oneFlower = await db.one("SELECT * FROM flowers WHERE id=$1", id);
     return oneFlower;
   } catch (error) {
     return error;
